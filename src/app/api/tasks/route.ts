@@ -8,7 +8,7 @@ export const GET = async () => {
     const allTasks: TaskDocument[] = await TaskModel.find();
 
     return NextResponse.json({ message: "タスク取得成功", tasks: allTasks});
-  } catch (error) {
+  } catch (_error) {
     return NextResponse.json({ message: "タスク取得失敗"}, {status: 500});
   }
 }
