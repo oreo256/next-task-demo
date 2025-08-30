@@ -10,7 +10,7 @@ export const GET = async () => {
     });
 
     return NextResponse.json({ message: "タスク取得成功", tasks: completedTasks});
-  } catch (_error) {
+  } catch {
     return NextResponse.json({ message: "タスク取得失敗"}, {status: 500});
   }
 }
